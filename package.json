@@ -1,0 +1,6 @@
+{
+    "scripts": {
+        "build": "python -m build",
+        "upload-pypi": "python -m twine upload --repository pypi dist/* --skip-existing --verbose"
+    }
+}

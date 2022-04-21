@@ -11,11 +11,8 @@ from suef_simpletcp import Server, Client, BaseConnection
 class MyServer(Server):
     def onClientConnect(self, client: BaseConnection):
         while True:
-            try:
-                if client.get().lower() == 'ping':
-                    client.send('Pong!')
-            except KeyboardInterrupt:
-                pass
+            if client.get().lower() == 'ping':
+                client.send('Pong!')
     
     def onClientDisconnect(self, client: BaseConnection, error: Exception):
         print(f'Connection to Client (ip: {client.ip}, port: {client.port}) got interrupted. Reason: {error.__class__.__name__}')

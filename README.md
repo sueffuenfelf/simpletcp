@@ -2,6 +2,11 @@
 
 This repository contains simplefied classes to use TCP sockets much easier.
 
+## Installation
+```
+> pip install suef-simpletcp
+```
+
 ## Usage
 
 ```python
